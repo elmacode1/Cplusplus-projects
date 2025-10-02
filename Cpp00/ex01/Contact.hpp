@@ -2,18 +2,19 @@
 #define CONTACT_HPP
 
 #include <string>
+#include <iostream>
 
 class Contact {
 	public :
-		int PhoneNum;
-		std::string FirstName;
-		std::string LastName;
-		std::string NickName;
-		std::string DarkestSecret;
+        std::string LastName;
+        std::string FirstName;
+        std::string NickName;
+        std::string DarkestSecret;
+        std::string PhoneNum;
 
-		Contact();
-		Contact(int PhoneNum,std::string FirstName,std::string LastName,
-			std::string NickName,std::string DarkestSecret);
+        Contact();
+        Contact(std::string LastName,std::string FirstName,
+            std::string NickName,std::string DarkestSecret,std::string PhoneNum);
 };
 
 #endif

@@ -3,13 +3,12 @@
 Contact::Contact(){
 
 }
-Contact::Contact(int PhoneNum,std::string FirstName,std::string LastName,
-std::string NickName,std::string DarkestSecret)
-{
-
-}
-
-int main(){
-	Contact contact(121,"malka","el","kj","tz");
-	
+Contact::Contact(std::string LastName,std::string FirstName,
+std::string NickName,std::string DarkestSecret,std::string PhoneNum){
+    std::cout << "copy const called" << std::endl;
+    this->LastName = LastName;
+    this->FirstName = FirstName;
+    this->NickName = NickName;
+    this->DarkestSecret = DarkestSecret;
+    this->PhoneNum = PhoneNum;
 }

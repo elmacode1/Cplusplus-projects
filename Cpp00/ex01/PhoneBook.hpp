@@ -3,11 +3,13 @@
 
 #include "Contact.hpp"
 #include <iostream>
+#include <cctype> 
 
+#define SIZE 3
 
 class PhoneBook {
 	public :
-		Contact list[8];
+		Contact list[SIZE];
 		int numContacts;
 		int num;
 
@@ -17,5 +19,4 @@ class PhoneBook {
 		void EXIT();
 		int getValidPosition();
 };
-
 #endif

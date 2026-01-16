@@ -1,22 +1,27 @@
+
 #ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-#include "Contact.hpp"
-#include <iostream>
-#include <cctype> 
-
-#define SIZE 3
+# include "Contact.hpp"
+# include <iostream>
+# include <string>
 
 class PhoneBook {
-	public :
-		Contact list[SIZE];
-		int numContacts;
-		int num;
 
-		PhoneBook();
-		void ADD();
-		void SEARCH();
-		void EXIT();
-		int getValidPosition();
+private:
+	Contact contacts[8];
+	int     contactCount;
+	int     oldestIndex;
+	std::string truncate(std::string str);
+	void        displayTable(void);
+	void        displayContactDetails(int index);
+	bool        isValidNumber(std::string str);
+
+public:
+	PhoneBook(void);
+	void addContact(void);
+	void searchContact(void);
 };
+
 #endif
+

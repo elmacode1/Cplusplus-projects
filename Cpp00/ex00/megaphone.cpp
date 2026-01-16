@@ -11,8 +11,7 @@ int main(int ac, char **av)
 			std::string str=av[j];
 			for(size_t i=0; i < str.length();i++)
 			{
-				if(std::isalpha(str[i]))
-					str[i]=std::toupper(str[i]);
+				str[i]=std::toupper(str[i]);
 				std::cout << str[i];
 			}
 		}

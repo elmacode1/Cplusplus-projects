@@ -1,13 +1,18 @@
+
 #include "Contact.hpp"
 
-Contact::Contact(){
+Contact::Contact( void )
+{}
 
+Contact::Contact(std::string fName, std::string lName,
+                 std::string nName, std::string phoneNum,
+                 std:: string dark) {
+	firstName = fName;
+	lastName = lName;
+	nickname = nName;
+	phoneNumber = phoneNum;
+	darkestSecret = dark;
 }
-Contact::Contact(std::string LastName,std::string FirstName,
-std::string NickName,std::string DarkestSecret,std::string PhoneNum){
-    this->LastName = LastName;
-    this->FirstName = FirstName;
-    this->NickName = NickName;
-    this->DarkestSecret = DarkestSecret;
-    this->PhoneNum = PhoneNum;
+bool Contact::isEmpty(void) const {
+	return firstName.empty();
 }

@@ -1,21 +1,37 @@
-#include "Contact.hpp"
 #include "PhoneBook.hpp"
+#include <iostream>
+#include <string>
 
-int main(){
-    PhoneBook list;
-    std::string read;
-	int i=0;
-    std::cout << "Welcome! ";
-    while(1){
-        std::cout << "please choose an option: ADD, SEARCH or EXIT" << std::endl;
-        std::getline(std::cin, read);
-        if(read == "ADD")
-            list.ADD();
-        else if(read == "SEARCH")
-            list.SEARCH();
-        else if(read == "EXIT"){
-			std::cout<< "See you next time!!" << std::endl;
+int main(void) {
+	PhoneBook phoneBook;
+	std::string command;
+	
+	std::cout << "\n╔═══════════════════════════════╗" << std::endl;
+	std::cout << "║  MY AWESOME PHONEBOOK         ║" << std::endl;
+	std::cout << "╚═══════════════════════════════╝\n" << std::endl;
+    	
+	while (true) {
+        std::cout << "Please choose an option: [ADD], [SEARCH], [EXIT]\n" << std::endl;
+		std::cout << ">";
+		std::getline(std::cin, command);
+		
+		if (std::cin.eof()) {
+			std::cout << "\nEOF detected. Exiting...\n" << std::endl;
 			break;
 		}
-    }
+		if (command == "ADD") {
+			phoneBook.addContact();
+		}
+		else if (command == "SEARCH") {
+			phoneBook.searchContact();
+		}
+		else if (command == "EXIT") {
+			std::cout << "\nSee you next time!  👋\n" << std::endl;
+			break;
+		}
+		else if (! command.empty()) {
+			std::cout << "Invalid command!" << std::endl;
+		}
+	}
+	return 0;
 }

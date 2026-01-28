@@ -7,7 +7,7 @@ int main(void) {
 	std::string command;
 	
 	std::cout << "\n╔═══════════════════════════════╗" << std::endl;
-	std::cout << "║  MY AWESOME PHONEBOOK         ║" << std::endl;
+	std::cout << "║  WELCOME TO YOUR PHONEBOOK    ║" << std::endl;
 	std::cout << "╚═══════════════════════════════╝\n" << std::endl;
     	
 	while (true) {

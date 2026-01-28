@@ -5,4 +5,5 @@ int main(){
     Zombie* heapZombie = newZombie("heapZm");
     heapZombie->announce();
     delete heapZombie;
+	return 0;
 }

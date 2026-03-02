@@ -15,7 +15,7 @@ void    HumanB::attack()
 {
     if (weapon == NULL)
     {
-        std::cout << name << ": doesn't has weapon :/" << std::endl;
+        std::cout << name << ": doesn't have weapon :/" << std::endl;
         return ;
     }
 

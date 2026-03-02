@@ -1,6 +1,7 @@
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
+
 int main()
 {
     {
@@ -11,10 +12,9 @@ int main()
         bob.attack();
     }
     {
-        Weapon club = Weapon("crude spiked club");
+        Weapon club("crude spiked club");
         HumanB jim("Jim");
         jim.setWeapon(club);
-        // std::cout << "test\n";
         jim.attack();
         club.setType("some other type of club");
         jim.attack();

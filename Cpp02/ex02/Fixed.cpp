@@ -91,7 +91,7 @@ Fixed Fixed::operator/(const Fixed& other){
     value = this->toFloat() / other.toFloat();
     return value;
 }
-Fixed Fixed::operator++(int){
+Fixed Fixed::operator++(int){ //post increment
     Fixed tmp;
     tmp = *this;
     this->fixed_point += 1;
@@ -103,7 +103,7 @@ Fixed Fixed::operator--(int){
     this->fixed_point -= 1;
     return tmp;
 }
-Fixed &Fixed::operator++(){
+Fixed &Fixed::operator++(){ // pre increment
     fixed_point += 1;
     return *this;
 }

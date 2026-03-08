@@ -12,7 +12,6 @@ class Zombie {
         ~Zombie();
         void announce (void);
 };
-        //standalone funcs, because we dont need to access class data
-        void randomChump (std::string name);
-        Zombie* newZombie (std::string name);
+		void randomChump (std::string name);
+		Zombie* newZombie (std::string name);
 #endif 

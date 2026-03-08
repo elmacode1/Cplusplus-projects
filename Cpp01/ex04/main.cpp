@@ -20,12 +20,12 @@ void    write_in_file(std::string &s1, std::string &s2, std::string &line, std::
     }
     file << line.substr(pos) << std::endl;
 }
-
 void sed(std::string filename, std::string s1, std::string s2)
 {
     std::string rep_fileName = filename + ".replace";
     std::string line;
     std::ifstream myFile(filename.c_str());
+
     if(myFile.is_open())
     {
         std::ofstream file(rep_fileName.c_str());

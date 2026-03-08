@@ -2,7 +2,7 @@
 
 int main(int ac, char **av){
     if(ac != 2){
-        std::cout << "Try again!" << std::endl;
+        std::cout << "Not valid!" << std::endl;
         return 1;
     }
 

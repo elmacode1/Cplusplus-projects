@@ -14,7 +14,7 @@ void Harl::error(){
 }
 
 void Harl::complain(std::string level){
-    void (Harl::*FuncPtr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    void (Harl::*functions[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     std::string array[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
     int index = -1;
@@ -29,14 +29,15 @@ void Harl::complain(std::string level){
     switch (index)
     {
         case 0:
+			(this->*functions[0])(); 
         case 1:
+			(this->*functions[1])();
         case 2:
+			(this->*functions[2])();
         case 3:
-            for (int i = index; i < 4; i++)
-                (this->*FuncPtr[i])();
+			(this->*functions[3])();
             break;
         default:
             std::cout << "Incorrect!" << std::endl;
     }
-    // std::cout << "Uncorrect!" << std::endl;
 }

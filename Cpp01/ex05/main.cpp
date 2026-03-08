@@ -2,5 +2,5 @@
 
 int main(){
     Harl person;
-    person.complain("DEBUG");
+    person.complain("INFO");
 }

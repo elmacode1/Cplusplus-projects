@@ -1,7 +1,6 @@
 #include "Zombie.hpp"
 
 Zombie::Zombie(){
-	this->name = "";
 }
 Zombie::~Zombie(){
 	 std::cout << this->name << " is destroyed" << std::endl;

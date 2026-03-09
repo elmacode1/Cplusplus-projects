@@ -34,6 +34,8 @@ void sed(std::string filename, std::string s1, std::string s2)
             write_in_file(s1, s2, line, file);
         }
     }
+	else
+	std::cout << "Invalid File" << std::endl;
 }
 
 int main(int ac, char **av){

@@ -19,7 +19,7 @@ void Fixed::setRawBits( int const raw ){
     fixed_point = raw;
 }
 Fixed::Fixed(const int n){
-    fixed_point = n << scaler; // shifting by 8
+    fixed_point = n << scaler; // shifting by 8 (n*256)
 }
 Fixed::Fixed(const float n){
     fixed_point = roundf(n * (1 << scaler));

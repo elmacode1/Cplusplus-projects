@@ -2,7 +2,7 @@
 
 ClapTrap::ClapTrap(std::string name) 
 	: name(name), hitPoints(10), energyPoints(10), attackDamage(0){
-		std::cout << " ClapTrap constructor called" << std::endl;
+		std::cout << "Constructor called" << std::endl;
 	}
 void ClapTrap::attack(const std::string& target){
 	if(hitPoints == 0)
@@ -30,5 +30,5 @@ void ClapTrap::beRepaired(unsigned int amount){
 }
 
 ClapTrap::~ClapTrap(){
-		std::cout << "ClapTrap destructor called" << std::endl;
+		std::cout << "Destructor called" << std::endl;
 }

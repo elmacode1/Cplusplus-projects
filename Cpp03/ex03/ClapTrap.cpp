@@ -1,34 +1,9 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
-	: name("default"), hitPoints(10), energyPoints(10), attackDamage(0)
-{
-		std::cout << "[ClapTrap] " << name << " constructed" << std::endl;
-}
-
 ClapTrap::ClapTrap(std::string name)
 	: name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 		std::cout << "[ClapTrap] " << name << " constructed" << std::endl;
-}
-
-ClapTrap::ClapTrap(const ClapTrap& copy)
-{
-	this->name = copy.name;
-	this->hitPoints = copy.hitPoints;
-	this->energyPoints = copy.energyPoints;
-	this->attackDamage = copy.attackDamage;
-	std::cout << "[ClapTrap] " << name << " copy constructed" << std::endl;
-}
-
-ClapTrap &ClapTrap::operator=( const ClapTrap& copy)
-{
-	if (this != &copy)
-	{
-		std::cout << "[ClapTrap] " << name << " assigned" << std::endl;
-		this->name = copy.name;
-	}
-	return (*this);
 }
 
 void ClapTrap::attack(const std::string& target)
@@ -62,7 +37,6 @@ void ClapTrap::takeDamage(unsigned int amount){
 				<< " damage (HP: " << hitPoints
 				<< ")" << std::endl;
 }
-
 void ClapTrap::beRepaired(unsigned int amount){
 	if (hitPoints == 0)
 	{

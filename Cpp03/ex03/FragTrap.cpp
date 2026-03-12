@@ -1,5 +1,32 @@
 #include "FragTrap.hpp"
 
+FragTrap::FragTrap()
+{
+		hitPoints = 100;
+		energyPoints = 100;
+		attackDamage = 30;
+		std::cout << "[FragTrap] " << name << " constructed" << std::endl;
+}
+FragTrap::FragTrap(const FragTrap& copy)
+{
+		hitPoints = copy.hitPoints;
+		energyPoints = copy.energyPoints;
+		attackDamage = copy.attackDamage;
+		name = copy.name;
+		std::cout << "[FragTrap] " << name << " copy constructed" << std::endl;
+}
+FragTrap& FragTrap::operator=( const FragTrap& copy)
+{
+	if (this != &copy)
+	{
+		this->name = copy.name;
+		hitPoints = copy.hitPoints;
+		energyPoints = copy.energyPoints;
+		attackDamage = copy.attackDamage;
+		std::cout << "[FragTrap] " << name << " assigned" << std::endl;
+	}
+	return (*this);
+}
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 	hitPoints = 100;
 	energyPoints = 100;

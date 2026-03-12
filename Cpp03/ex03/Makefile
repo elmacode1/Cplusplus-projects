@@ -1,5 +1,4 @@
-NAME =	FragTrap
-
+NAME = DiamondTrap
 SRCS = $(shell ls | grep .cpp)
 OBJS = $(SRCS:.cpp=.o)
 

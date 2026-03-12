@@ -13,11 +13,8 @@ ClapTrap::ClapTrap(std::string name)
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy)
+	: name(name), hitPoints(copy.hitPoints), energyPoints(copy.energyPoints), attackDamage(copy.attackDamage)
 {
-	this->name = copy.name;
-	this->hitPoints = copy.hitPoints;
-	this->energyPoints = copy.energyPoints;
-	this->attackDamage = copy.attackDamage;
 	std::cout << "[ClapTrap] " << name << " copy constructed" << std::endl;
 }
 

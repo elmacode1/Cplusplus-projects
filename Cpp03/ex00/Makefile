@@ -1,6 +1,6 @@
 NAME =	ClapTrap
 
-SRCS = $(shell ls | grep .cpp)
+SRCS = ClapTrap.cpp main.cpp 
 OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++

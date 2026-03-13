@@ -19,6 +19,10 @@ class ClapTrap {
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 		~ClapTrap();
+		unsigned int get(){
+			return energyPoints;
+		}
+		
 };
 
 #endif

@@ -22,11 +22,11 @@ ClapTrap &ClapTrap::operator=( const ClapTrap& copy)
 {
 	if (this != &copy)
 	{
-		std::cout << "[ClapTrap] name" << name << " assigned" << std::endl;
 		this->name = copy.name;
 		hitPoints = copy.hitPoints;
 		energyPoints = copy.energyPoints;
 		attackDamage = copy.attackDamage;
+		std::cout << "[ClapTrap] " << name << " assigned" << std::endl;
 	}
 	return (*this);
 }

@@ -1,5 +1,5 @@
 NAME = DiamondTrap
-SRCS = $(shell ls | grep .cpp)
+SRCS = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++

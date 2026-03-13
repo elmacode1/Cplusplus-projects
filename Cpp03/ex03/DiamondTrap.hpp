@@ -14,10 +14,13 @@ class DiamondTrap :  public ScavTrap, public FragTrap{
 		DiamondTrap(const DiamondTrap& copy);
 		DiamondTrap &operator=(const DiamondTrap& copy);
 		DiamondTrap(std::string name);
-		using FragTrap::highFivesGuys();
-		using ScavTrap::attack();
-		using ScavTrap:: guardGate();
+		using FragTrap::highFivesGuys;
+		using ScavTrap::attack;
+		using ScavTrap::guardGate;
 		void whoAmI();
 		~DiamondTrap();
+		unsigned int test(){
+			return ClapTrap::energyPoints;
+		}
 };
 #endif

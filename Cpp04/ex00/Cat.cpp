@@ -1,0 +1,29 @@
+#include "Cat.hpp"
+
+Cat::Cat()
+{
+	this->type = "Cat";
+	std::cout << "Default Cat constructed" << std::endl;
+}
+Cat::Cat(const Cat& copy) : Animal(copy)
+{
+	std::cout << "Cat Copy constructed" << std::endl;
+}
+Cat &Cat::operator=(cont Cat& copy)
+{
+	if(this != &copy)
+	{
+		Animal::operator=(copy);
+		std::cout << "Cat assigned" << std::endl;
+	}
+	return (*this);
+}
+void Cat::makeSound()
+{
+	std::cout << "Meooow" << std::endl;
+}
+
+Cat::~Cat()
+{
+	std::cout << "Cat destroyed!" << std::endl;
+}

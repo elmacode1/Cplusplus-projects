@@ -3,6 +3,7 @@
 Cat::Cat()
 {
 	this->type = "Cat";
+	brain = new Brain();
 	std::cout << "Default Cat constructed" << std::endl;
 }
 Cat::Cat(const Cat& copy) : Animal(copy)
@@ -26,4 +27,5 @@ void Cat::makeSound() const
 Cat::~Cat()
 {
 	std::cout << "Cat destroyed!" << std::endl;
+	delete brain;
 }

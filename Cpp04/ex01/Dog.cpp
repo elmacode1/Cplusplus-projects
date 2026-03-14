@@ -3,6 +3,7 @@
 Dog::Dog()
 {
 	this->type = "Dog";
+	brain = new Brain();
 	std::cout << "Default Dog constructed" << std::endl;
 }
 Dog::Dog(const Dog& copy) : Animal(copy)
@@ -25,4 +26,5 @@ void Dog::makeSound() const
 Dog::~Dog()
 {
 	std::cout << "Dog destroyed!" << std::endl;
+	delete brain;
 }

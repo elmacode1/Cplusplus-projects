@@ -11,6 +11,7 @@ class Brain {
 		Brain();
 		Brain(const Brain& copy);
 		Brain &operator=(const Brain& copy);
+		std::string &getType(int index);
 		~Brain();
 };
 #endif

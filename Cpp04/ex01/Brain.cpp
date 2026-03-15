@@ -20,6 +20,14 @@ Brain &Brain::operator=(const Brain& copy)
 	}
 	return *this;
 }
+std::string& Brain::getIdea(int index)
+{
+		return ideas[index];
+}
+void Brain::setIdea(std::string idea,int index)
+{
+		ideas[index]=idea;
+}
 Brain::~Brain()
 {
 	std::cout << "Brain destroyed" << std::endl;

@@ -3,8 +3,12 @@
 
 int main()
 {
+
 const Animal* j = new Dog();
 const Animal* i = new Cat();
+delete j;//should not create a leak
+delete i;
+
 Animal* obj[10];
 for(int i=0; i<10;i++){
 	if(i<5)
@@ -18,6 +22,9 @@ for(int i=0; i<10;i++){
 for(int i=0; i<10;i++){
 	delete obj[i]; 
 }
+obj[0]->brain->setIdea("test",0);
+
+std::cout << obj[0]->brain->getIdea(0);
 delete j;//should not create a leak
 delete i;
 return 0;

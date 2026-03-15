@@ -7,7 +7,7 @@ Dog::Dog()
 	std::cout << "Default Dog constructed" << std::endl;
 }
 
-Dog::Dog(const Dog& copy) : Animal(copy)
+Dog::Dog(const Dog& copy) : AAnimal(copy)
 {
 	brain = new Brain(*copy.brain); // deep copy via Brain copy ctor
 	std::cout << "Dog Copy constructed" << std::endl;
@@ -17,7 +17,7 @@ Dog &Dog::operator=(const Dog& copy)
 {
 	if (this != &copy)
 	{
-		Animal::operator=(copy);
+		AAnimal::operator=(copy);
 
 		if (brain)
 			delete brain;

@@ -22,7 +22,7 @@ void Animal::makeSound() const
 {
 	std::cout << "no sound" << std::endl;
 }
-std::string& Animal::getType() const
+const std::string& Animal::getType() const
 {
 	return type;
 }

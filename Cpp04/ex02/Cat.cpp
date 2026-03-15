@@ -7,7 +7,7 @@ Cat::Cat()
 	std::cout << "Default Cat constructed" << std::endl;
 }
 
-Cat::Cat(const Cat& copy) : Animal(copy)
+Cat::Cat(const Cat& copy) : AAnimal(copy)
 {
 	brain = new Brain(*copy.brain); // deep copy
 	std::cout << "Cat Copy constructed" << std::endl;
@@ -17,7 +17,7 @@ Cat &Cat::operator=(const Cat& copy)
 {
 	if (this != &copy)
 	{
-		Animal::operator=(copy);
+		AAnimal::operator=(copy);
 
 		if (brain)
 			delete brain;

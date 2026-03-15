@@ -1,11 +1,14 @@
+
 #include "Dog.hpp"
 #include "Cat.hpp"
 
 int main()
 {
-       std::cout << "---- Basic tests from subject ----" << std::endl;
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    // AAnimal a;
+	// a.getType();
+    std::cout << "---- Basic tests from subject ----" << std::endl;
+    const AAnimal* j = new Dog();
+    const AAnimal* i = new Cat();
 
     delete j;
     delete i;
@@ -13,7 +16,7 @@ int main()
     std::cout << "\n---- Array of Animals test ----" << std::endl;
 
     const int size = 10;
-    const Animal* animals[size];
+    const AAnimal* animals[size];
 
     for (int k = 0; k < size; k++)
     {
